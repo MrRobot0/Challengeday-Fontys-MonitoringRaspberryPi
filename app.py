@@ -6,6 +6,7 @@ import psutil
 import struct
 import sys
 import time
+import ConfigParser
 app = Flask(__name__, static_url_path='/static')
 
 
@@ -146,6 +147,21 @@ def timehostipdisk():
 		'IP': IP
     }
 	return render_template('timehostipdisk.html', **templateData)
+	
+@app.route("/test")
+def dash():
+     configParser = ConfigParser.RawConfigParser()   
+	 configFilePath = r'/static/IP adressen/configuration-infrastructure.cfg'
+	 configParser.read(configFilePath)
+	 
+	 self.path = configParser.get('your config', 'sensorftpMAC')
+	
+	
+	
+	templateData = {
+	'title': 'test'
+	}
+	return render_template('test.html', **templateData)
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
