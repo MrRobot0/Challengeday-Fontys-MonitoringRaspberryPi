@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
+	</head>
+	<body style="background-color:#444444;">
+	{% if cpu_usage > 50 %}
+	<table>
+	<tr>
+		<td>CPU Usage</td>
+		<td><img src="static/images/errormark.png" height="20" width="20"></td>
+		<td>CPU Usage is {{ cpu_usage }}%</td>
+	</tr>
+	</table>
+	{% else %}
+	<table>
+	<tr>
+		<td>CPU Usage: </td>
+		<td><img src="static/images/checkmark.png" height="20" width="20"></td>
+	</tr>
+	</table>
+	{% endif %}
+	
+	{% if ram_usage > 50 %}
+	<table>
+	<tr>
+		<td>RAM Usage</td>
+		<td><img src="static/images/errormark.png" height="20" width="20"></td>
+		<td>RAM Usage is {{ ram_usage }}%</td>
+	</tr>
+	</table>
+	{% else %}
+	<table>
+	<tr>
+		<td>RAM Usage: </td>
+		<td><img src="static/images/checkmark.png" height="20" width="20"></td>
+	</tr>
+	</table>
+	{% endif %}
+	</body>
+</html>
