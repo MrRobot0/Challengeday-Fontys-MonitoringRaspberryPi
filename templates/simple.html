@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 	<head>
 		<title>{{ title }}</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
+		<script type="text/javascript" src="/static/scripts/javascript/refreshscriptsimpel.js"></script>
 	</head>
-	<body style="background-color:#444444;">
-	<button name="forwardBtn" onclick="test()">Forward</button>
-	<h1>{{ test }}</h1>
+	<body style="background-color:#444444;" onLoad="refreshsimpel()">
+		
+		<div id="refreshsimpel"></div>
+		
 	</body>
 </html>
