@@ -57,17 +57,23 @@ def dash():
 
 	
 @app.route("/detail")
-def detail():	
+def detail():
+	hostnameString = socket.gethostname()
+	
 	templateData = {
-		'title' : 'Monitoring'
+		'title' : 'Monitoring',
+		'hostname' : hostnameString
     }
 	return render_template('detailed.html', **templateData)
 
 	
 @app.route("/")
-def simpel():	
+def simpel():
+	hostnameString = socket.gethostname()
+	
 	templateData = {
-		'title' : 'Simpel'
+		'title' : 'Simpel',
+		'hostname' : hostnameString
     }
 	return render_template('simple.html', **templateData)
 
