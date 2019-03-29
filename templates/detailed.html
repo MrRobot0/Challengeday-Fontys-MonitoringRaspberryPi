@@ -3,6 +3,19 @@
 		<title>{{ title }}</title>
 		<link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
 		<script type="text/javascript" src="/static/scripts/javascript/refreshscript.js"></script>
+		<style>
+.button {
+  background-color: #525252;
+  border: none;
+  color: #FFDF00;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+		</style>
    </head>
    <body style="background-color:#444444" onLoad="refresh1sec()">
 		
@@ -10,5 +23,11 @@
 		<br>
 		<div id="cpuram"></div>
 		
+	<table>
+	<tr>
+	<td><form method="get" action="/"><button class="button">Simpel page</button></form></td>
+	</tr>
+	</table>
+	
 	</body>
 </html>

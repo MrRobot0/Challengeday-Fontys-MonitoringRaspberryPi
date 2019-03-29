@@ -6,7 +6,6 @@ import psutil
 import struct
 import sys
 import time
-import ConfigParser
 app = Flask(__name__, static_url_path='/static')
 
 
@@ -23,9 +22,9 @@ def refreshsimpel():
 	hostnameString = socket.gethostname()
    
 	total, used, free = shutil.disk_usage("\\")
-	disktotal = "%d GB" % (total // (2**30))
-	diskused = "%d GB" % (used // (2**30))
-	diskfree = "%d GB" % (free // (2**30))
+	disktotal = (total // (2**30))
+	diskused = (used // (2**30))
+	diskfree = (free // (2**30))
    
    
 	IP = [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]
@@ -57,7 +56,7 @@ def dash():
 	return render_template('dashboard.html', **templateData)
 
 	
-@app.route("/")
+@app.route("/detail")
 def detail():	
 	templateData = {
 		'title' : 'Monitoring'
@@ -65,7 +64,7 @@ def detail():
 	return render_template('detailed.html', **templateData)
 
 	
-@app.route("/simpel")
+@app.route("/")
 def simpel():	
 	templateData = {
 		'title' : 'Simpel'
@@ -112,14 +111,7 @@ def timehostipdisk():
 	return render_template('timehostipdisk.html', **templateData)
 	
 @app.route("/test")
-def dash():
-     configParser = ConfigParser.RawConfigParser()   
-	 configFilePath = r'/static/IP adressen/configuration-infrastructure.cfg'
-	 configParser.read(configFilePath)
-	 
-	 self.path = configParser.get('your config', 'sensorftpMAC')
-	
-	
+def test():
 	
 	templateData = {
 	'title': 'test'

@@ -2,6 +2,19 @@
 	<head>
 		<title>{{ title }}</title>
 		<link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
+		<style>
+.button {
+  background-color: #525252;
+  border: none;
+  color: #FFDF00;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+		</style>
 	</head>
 	<body style="background-color:#444444;">
 	{% if cpu_usage > 50 %}
@@ -37,5 +50,28 @@
 	</tr>
 	</table>
 	{% endif %}
+
+	{% if diskfree < 10 %}
+	<table>
+	<tr>
+		<td>Disk Usage</td>
+		<td><img src="static/images/errormark.png" height="20" width="20"></td>
+		<td>Disk space free is {{ diskfree }}!</td>
+	</tr>
+	</table>
+	{% else %}
+	<table>
+	<tr>
+		<td>Disk Usage: </td>
+		<td><img src="static/images/checkmark.png" height="20" width="20"></td>
+	</tr>
+	</table>
+	{% endif %}
+	
+	<table>
+	<tr>
+	<td><form method="get" action="/detail"><button class="button">Detailed page</button></form></td>
+	</tr>
+	</table>
 	</body>
 </html>
