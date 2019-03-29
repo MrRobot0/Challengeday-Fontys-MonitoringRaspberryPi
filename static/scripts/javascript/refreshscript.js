@@ -4,7 +4,7 @@ function refresh1sec(){
 	rawFile.open("GET", "cpuram", false);
 	rawFile.send(null);
 	document.getElementById("cpuram").innerHTML = rawFile.responseText;
-	setTimeout('refresh1sec()',2000);
+	setTimeout('refresh1sec()',1000);
 }
 function refresh30sec(){
 	var rawFile = new XMLHttpRequest();

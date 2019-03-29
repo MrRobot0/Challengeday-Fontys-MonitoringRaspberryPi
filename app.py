@@ -10,10 +10,6 @@ app = Flask(__name__, static_url_path='/static')
 
 
 
-
-
-
-
 @app.route("/refreshsimpel")
 def refreshsimpel():
 	now = datetime.datetime.now()

@@ -16,8 +16,8 @@
   cursor: pointer;
 		</style>
 	</head>
-	<body style="background-color:#444444;">
-	{% if cpu_usage > 50 %}
+	<body style="background-color:#444444;">	
+	{% if cpu_usage > 80 %}
 	<table>
 	<tr>
 		<td>CPU Usage: </td>
@@ -37,7 +37,7 @@
 	{% if ram_usage > 50 %}
 	<table>
 	<tr>
-		<td>RAM Usage</td>
+		<td>RAM Usage: </td>
 		<td><img src="static/images/errormark.png" height="20" width="20"></td>
 		<td>RAM Usage is {{ ram_usage }}%</td>
 	</tr>
