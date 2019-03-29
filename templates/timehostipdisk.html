@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{ title }}</title>
+		<style>
+		table {
+		color:#FFDF00;
+		font-family:"Lucida Console";
+		}
+		th, td {
+		padding: 3px;
+		}
+		</style>
+	</head>
+	<body style="background-color:#444444;">
+	<table>
+		<tr>
+			<td>Time</td>
+			<td>{{ time }}</td> 
+		</tr>
+		<tr>
+			<td>Hostname</td>
+			<td>{{ hostname }}</td> 
+		</tr>
+		<tr>
+			<td>IP</td>
+			<td>{{ IP }}</td> 
+		</tr>
+	</table>
+	<br>
+	<table>
+		<tr>
+			<td>Disk total size:</td>
+			<td>{{ disktotal }}</td>
+		</tr>
+		<tr>
+			<td>Disk used size:</td>
+			<td>{{ diskused }}</td>
+		</tr>
+		<tr>
+			<td>Disk free size:</td>
+			<td>{{ diskfree }}</td>
+		</tr>
+	</table>
+	</body>
+</html>
