@@ -24,7 +24,7 @@ def simple():
 	ram_usage = psutil.virtual_memory()[2]
 	
 	
-	
+	test
 	templateData = {
 		'title' : 'Monitoring',
 		'time': timeString,
