@@ -111,6 +111,32 @@ def timehostipdisk():
 		'IP': IP
     }
 	return render_template('timehostipdisk.html', **templateData)
+
+@app.route("/chart")
+def chart():
+	cpu_usage = psutil.cpu_percent()
+	
+	def chartcpu():
+		global cpu1
+		global cpu2
+		global cpu3
+		global cpu4
+		global cpu5
+		cpu1 = psutil.cpu_percent()
+		chartcpu()
+		
+	
+	
+	templateData = {
+		'title' : 'Chart',
+		'cpu_usage': cpu_usage,
+		'cpu1' : cpu1,
+		'cpu2' : cpu2,
+		'cpu3' : cpu3,
+		'cpu4' : cpu4,
+		'cpu5' : cpu5
+    }
+	return render_template('chart.html', **templateData)
 	
 @app.route("/test")
 def test():
