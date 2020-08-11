@@ -7,6 +7,7 @@ It is a monitoring tool for Raspberry Pi's. There is a dashboard where you can m
 ## Screenshots
 ### Simpel page
 <img src="https://i.imgur.com/p4mbfaj.gif"/>
+
 ### Detailed page
 <img src="https://i.imgur.com/IaEbRWv.gif"/>
 
