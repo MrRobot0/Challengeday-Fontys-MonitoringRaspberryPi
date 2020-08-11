@@ -14,15 +14,15 @@ It is a monitoring tool for Raspberry Pi's. There is a dashboard where you can m
 ## Installation
 1. Download all the files.
 2. Install the requirements with pip: 
-'''python
+```python
 pip install -r requirements.txt
-'''
+```
 3. Set port of you own choosing at the end of the app.py where port 80 is now: 
-'''python
+```python
 app.run(host='0.0.0.0', port=80, debug=True)
-'''
+```
 4. Launch the app.py
 5. goto the website with your own port: 
-'''html
+```html
 localhost:80
-'''
+```
