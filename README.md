@@ -6,7 +6,7 @@ It is a monitoring tool for Raspberry Pi's. There is a dashboard where you can m
 
 ## Screenshots
 
-<img src="https://i.imgur.com/p4mbfaj.gif" alt='You don't support image's :(' />
+<img src="https://i.imgur.com/p4mbfaj.gif"/>
 
 ## Installation
 1. Download all the files.
